@@ -455,7 +455,7 @@ export default function AyaHomeResortLanding() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-3"
+            className="flex flex-wrap justify-center gap-3 mb-16 relative z-20"
           >
             {[
               { label: 'Perfil Econômico', file: '/docs/perfil-economico-ribeirao-pires.pdf' },
@@ -466,7 +466,7 @@ export default function AyaHomeResortLanding() {
                 <Button
                   variant="outline"
                   size="sm"
-                  className="border-orange-300 text-orange-600 hover:bg-orange-50"
+                  className="border-orange-300 text-orange-600 hover:bg-orange-50 bg-white/90 backdrop-blur-sm shadow-sm"
                 >
                   <FileText className="mr-2 h-3 w-3" />
                   {doc.label}
@@ -475,14 +475,15 @@ export default function AyaHomeResortLanding() {
               </a>
             ))}
           </motion.div>
+        </motion.div>
 
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <ChevronDown className="h-8 w-8 text-orange-500" />
-          </motion.div>
+        {/* Scroll indicator - fora do container com opacity */}
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
+        >
+          <ChevronDown className="h-8 w-8 text-orange-500" />
         </motion.div>
       </section>
 
