@@ -1126,7 +1126,7 @@ export default function AyaHomeResortLanding() {
                   </motion.tr>
                   {[
                     // RIBEIRÃO PIRES - Concorrentes reais verificados
-                    { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', date: '2025', link: 'https://tothconstrutora.com.br' },
+                    { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', date: '2025', link: 'https://tothconstrutora.com.br/obras/residencial-vertice/' },
 
                     // SANTO ANDRÉ - Empreendimentos verificados
                     { name: 'Epic Patriani', construtora: 'Patriani', local: 'Santo André', area: '190m²', price: 'R$2M+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/epic-patriani' },
@@ -1139,7 +1139,7 @@ export default function AyaHomeResortLanding() {
                     { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'São Bernardo', area: 'Consulte', price: 'Consulte', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
 
                     // MAUÁ - Empreendimentos verificados
-                    { name: 'Res. Morada Nova', construtora: 'MRV Engenharia', local: 'Mauá', area: '36-43m²', price: 'R$290k+', date: 'Pronto', link: 'https://www.mrv.com.br/imoveis/sao-paulo/maua' },
+                    { name: 'Res. Morada Nova', construtora: 'MRV Engenharia', local: 'Mauá', area: '36-43m²', price: 'R$290k+', date: 'Pronto', link: 'https://www.mrv.com.br/imoveis/apartamentos/sao-paulo/maua/parque-sao-vicente/residencial-morada-nova' },
                   ].map((comp, i) => (
                     <motion.tr
                       key={i}
