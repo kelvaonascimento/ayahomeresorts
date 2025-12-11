@@ -310,7 +310,7 @@ export default function AyaHomeResortLanding() {
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Documento executivo desenvolvido pela <strong className="text-orange-600">Agência RPK</strong> com
-                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 8 concorrentes verificados</strong>
+                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 10 concorrentes verificados</strong>
                 (Ribeirão Pires + Santo André + ABC), <strong>análise competitiva profunda</strong>,
                 <strong> identificação de públicos-alvo qualificados</strong>, <strong>estratégias de campanha segmentadas</strong> e
                 <strong> projeções de resultados</strong> para os próximos 12 meses.
@@ -1129,21 +1129,23 @@ export default function AyaHomeResortLanding() {
                     <td className="py-4 text-gray-900">Mar/28</td>
                   </motion.tr>
                   {[
-                    // RIBEIRÃO PIRES - Concorrentes reais verificados
+                    // RIBEIRÃO PIRES - Único concorrente real na cidade
                     { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', date: '2025', link: 'https://tothconstrutora.com.br/obras/residencial-vertice/' },
 
-                    // SANTO ANDRÉ - Empreendimentos verificados
-                    { name: 'Epic Patriani', construtora: 'Patriani', local: 'Santo André', area: '190m²', price: 'R$2M+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/epic-patriani' },
-                    { name: 'Magno Jardim', construtora: 'Patriani', local: 'Santo André', area: '72m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/magno-jardim' },
+                    // SANTO ANDRÉ - Concorrentes diretos (metragem/preço similar)
+                    { name: 'Mirai Campestre', construtora: 'Patriani', local: 'Santo André', area: '79-93m²', price: 'R$900k+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/mirai-campestre-patriani' },
                     { name: 'Vista Campestre', construtora: 'Patriani', local: 'Santo André', area: '134m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/vista-campestre' },
-                    { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Santo André', area: '112m²', price: 'Consulte', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
-                    { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Santo André', area: '57-90m²', price: 'Consulte', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
+                    { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Santo André', area: '112m²', price: 'R$1.2M+', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
+                    { name: 'CONCEPT Campestre', construtora: 'Não informada', local: 'Santo André', area: '92m²', price: 'R$920k', date: 'Jan/25', link: 'https://abcapartamentos.com.br/property/concept/' },
+                    { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Santo André', area: '57-90m²', price: 'R$570k+', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
+
+                    // MAUÁ - Concorrentes diretos (metragem/preço similar)
+                    { name: 'Res. Mandarim', construtora: 'Qualibens', local: 'Mauá', area: '83-110m²', price: 'R$570k+', date: '2025', link: 'https://residencialmandarim.com/' },
+                    { name: 'Splendore Mauá', construtora: 'Não informada', local: 'Mauá', area: '195m²', price: 'R$1.79M', date: 'Jul/27', link: 'https://abcapartamentos.com.br/property/splendore-maua/' },
 
                     // SÃO BERNARDO DO CAMPO
-                    { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'São Bernardo', area: 'Consulte', price: 'Consulte', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
-
-                    // MAUÁ - Empreendimentos verificados
-                    { name: 'Res. Morada Nova', construtora: 'MRV Engenharia', local: 'Mauá', area: '36-43m²', price: 'R$290k+', date: 'Pronto', link: 'https://www.mrv.com.br/imoveis/apartamentos/sao-paulo/maua/parque-sao-vicente/residencial-morada-nova' },
+                    { name: 'Helbor Trilogy', construtora: 'Helbor', local: 'São Bernardo', area: '77-94m²', price: 'R$800k+', date: 'Pronto', link: 'https://www.helbor.com.br/trilogyhomeoffice' },
+                    { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'São Bernardo', area: '54-75m²', price: 'Consulte', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
                   ].map((comp, i) => (
                     <motion.tr
                       key={i}
@@ -1170,8 +1172,8 @@ export default function AyaHomeResortLanding() {
               </table>
               <div className="mt-6 flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">8 empreendimentos</strong> mapeados:
-                  <strong> 1 em Ribeirão Pires</strong>, <strong>5 em Santo André</strong>, <strong>1 em São Bernardo</strong>, <strong>1 em Mauá</strong>
+                  <strong className="text-orange-600">10 empreendimentos</strong> mapeados:
+                  <strong> 1 em Ribeirão Pires</strong>, <strong>5 em Santo André</strong>, <strong>2 em São Bernardo</strong>, <strong>2 em Mauá</strong>
                 </p>
                 <span className="text-xs text-gray-500">Atualizado: Dezembro 2025</span>
               </div>
