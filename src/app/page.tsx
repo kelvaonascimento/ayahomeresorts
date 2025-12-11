@@ -457,15 +457,19 @@ export default function AyaHomeResortLanding() {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap justify-center gap-3"
           >
-            {['Perfil Econômico', 'Panorama Atual', 'Panorama Imobiliário'].map((label, i) => (
-              <a key={i} href="#" target="_blank">
+            {[
+              { label: 'Perfil Econômico', file: '/docs/perfil-economico-ribeirao-pires.pdf' },
+              { label: 'Panorama Atual', file: '/docs/panorama-ribeirao-pires.pdf' },
+              { label: 'Panorama Imobiliário', file: '/docs/panorama-imobiliario-ribeirao-pires.pdf' }
+            ].map((doc, i) => (
+              <a key={i} href={doc.file} target="_blank" rel="noopener noreferrer" download>
                 <Button
                   variant="outline"
                   size="sm"
                   className="border-orange-300 text-orange-600 hover:bg-orange-50"
                 >
                   <FileText className="mr-2 h-3 w-3" />
-                  {label}
+                  {doc.label}
                   <Download className="ml-2 h-3 w-3" />
                 </Button>
               </a>
