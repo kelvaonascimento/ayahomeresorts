@@ -1136,12 +1136,12 @@ export default function AyaHomeResortLanding() {
                     { name: 'Mirai Campestre', construtora: 'Patriani', local: 'Santo André', area: '79-93m²', price: 'R$900k+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/mirai-campestre-patriani' },
                     { name: 'Vista Campestre', construtora: 'Patriani', local: 'Santo André', area: '134m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/vista-campestre' },
                     { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Santo André', area: '112m²', price: 'R$1.2M+', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
-                    { name: 'CONCEPT Campestre', construtora: 'Não informada', local: 'Santo André', area: '92m²', price: 'R$920k', date: 'Jan/25', link: 'https://abcapartamentos.com.br/property/concept/' },
+                    { name: 'CONCEPT Campestre', construtora: 'Sabbahi', local: 'Santo André', area: '92m²', price: 'R$920k', date: 'Jan/25', link: 'https://braido.com.br/concept/' },
                     { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Santo André', area: '57-90m²', price: 'R$570k+', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
 
                     // MAUÁ - Concorrentes diretos (metragem/preço similar)
                     { name: 'Res. Mandarim', construtora: 'Qualibens', local: 'Mauá', area: '83-110m²', price: 'R$570k+', date: '2025', link: 'https://residencialmandarim.com/' },
-                    { name: 'Splendore Mauá', construtora: 'Não informada', local: 'Mauá', area: '195m²', price: 'R$1.79M', date: 'Jul/27', link: 'https://abcapartamentos.com.br/property/splendore-maua/' },
+                    { name: 'Splendore Mauá', construtora: 'F. Bonano', local: 'Mauá', area: '195m²', price: 'R$1.79M', date: '2027', link: 'https://fbonanoengenharia.com.br/empreendimentos/splendore/' },
 
                     // SÃO BERNARDO DO CAMPO
                     { name: 'Helbor Trilogy', construtora: 'Helbor', local: 'São Bernardo', area: '77-94m²', price: 'R$800k+', date: 'Pronto', link: 'https://www.helbor.com.br/trilogyhomeoffice' },
