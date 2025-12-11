@@ -310,8 +310,8 @@ export default function AyaHomeResortLanding() {
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Documento executivo desenvolvido pela <strong className="text-orange-600">Agência RPK</strong> com
-                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 10+ concorrentes</strong>
-                (Ribeirão Pires + Mauá + ABC), <strong>análise competitiva profunda</strong>,
+                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 8 concorrentes verificados</strong>
+                (Ribeirão Pires + Santo André + ABC), <strong>análise competitiva profunda</strong>,
                 <strong> identificação de públicos-alvo qualificados</strong>, <strong>estratégias de campanha segmentadas</strong> e
                 <strong> projeções de resultados</strong> para os próximos 12 meses.
               </p>
@@ -1126,20 +1126,20 @@ export default function AyaHomeResortLanding() {
                   </motion.tr>
                   {[
                     // RIBEIRÃO PIRES - Concorrentes reais verificados
-                    { name: 'Residencial VISTTA (Toth)', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '56-80m²', price: 'R$427k-623k', date: 'Ago/26', status: 'Lançamento' },
+                    { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', date: '2025', link: 'https://tothconstrutora.com.br' },
 
-                    // MAUÁ
-                    { name: 'Motiró Campo Branco', construtora: 'Motiró', local: 'Mauá', area: '57-90m²', price: 'R$600k-900k', date: '2025', status: 'Em obras' },
-                    { name: 'Vila Mauá Residence', construtora: 'MRV Engenharia', local: 'Mauá', area: '65m²', price: 'R$450k', date: '2025', status: 'Lançamento' },
-                    { name: 'Parque Mauá Living', construtora: 'Tenda', local: 'Mauá', area: '70-82m²', price: 'R$520k-620k', date: '2026', status: 'Lançamento' },
-                    { name: 'Boulevard Mauá', construtora: 'Direcional', local: 'Mauá', area: '75m²', price: 'R$580k', date: '2025', status: 'Em construção' },
+                    // SANTO ANDRÉ - Empreendimentos verificados
+                    { name: 'Epic Patriani', construtora: 'Patriani', local: 'Santo André', area: '190m²', price: 'R$2M+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/epic-patriani' },
+                    { name: 'Magno Jardim', construtora: 'Patriani', local: 'Santo André', area: '72m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/magno-jardim' },
+                    { name: 'Vista Campestre', construtora: 'Patriani', local: 'Santo André', area: '134m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/vista-campestre' },
+                    { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Santo André', area: '112m²', price: 'Consulte', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
+                    { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Santo André', area: '57-90m²', price: 'Consulte', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
 
-                    // ABC PAULISTA
-                    { name: 'Epic Santo André', construtora: 'Patriani', local: 'Santo André', area: '190m²', price: 'R$2M+', date: '2025', status: 'Alto padrão' },
-                    { name: 'Wine Santo André', construtora: 'Patriani', local: 'Santo André', area: '94m²', price: 'R$750k', date: '2025', status: 'Lançamento' },
-                    { name: 'Reserva São Caetano', construtora: 'Cyrela', local: 'São Caetano', area: '89m²', price: 'R$850k', date: '2025', status: 'Lançamento' },
-                    { name: 'Urban Living SBC', construtora: 'Gafisa', local: 'São Bernardo', area: '76m²', price: 'R$680k', date: '2025', status: 'Lançamento' },
-                    { name: 'Grand Park Diadema', construtora: 'Tenda', local: 'Diadema', area: '68m²', price: 'R$480k', date: '2026', status: 'Pré-lançamento' },
+                    // SÃO BERNARDO DO CAMPO
+                    { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'São Bernardo', area: 'Consulte', price: 'Consulte', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
+
+                    // MAUÁ - Empreendimentos verificados
+                    { name: 'Res. Morada Nova', construtora: 'MRV Engenharia', local: 'Mauá', area: '36-43m²', price: 'R$290k+', date: 'Pronto', link: 'https://www.mrv.com.br/imoveis/sao-paulo/maua' },
                   ].map((comp, i) => (
                     <motion.tr
                       key={i}
@@ -1150,7 +1150,11 @@ export default function AyaHomeResortLanding() {
                       whileHover={{ backgroundColor: '#f9fafb' }}
                       className="border-b border-gray-100 transition-colors"
                     >
-                      <td className="py-4 text-gray-700">{comp.name}</td>
+                      <td className="py-4 text-gray-700">
+                        <a href={comp.link} target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 hover:underline">
+                          {comp.name}
+                        </a>
+                      </td>
                       <td className="py-4 text-gray-600 text-sm">{comp.construtora}</td>
                       <td className="py-4 text-gray-600 text-sm">{comp.local}</td>
                       <td className="py-4 text-gray-600">{comp.area}</td>
@@ -1162,8 +1166,8 @@ export default function AyaHomeResortLanding() {
               </table>
               <div className="mt-6 flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">10 empreendimentos</strong> mapeados:
-                  <strong> 1 em Ribeirão Pires</strong>, <strong>4 em Mauá</strong>, <strong>5 no ABC</strong>
+                  <strong className="text-orange-600">8 empreendimentos</strong> mapeados:
+                  <strong> 1 em Ribeirão Pires</strong>, <strong>5 em Santo André</strong>, <strong>1 em São Bernardo</strong>, <strong>1 em Mauá</strong>
                 </p>
                 <span className="text-xs text-gray-500">Atualizado: Dezembro 2025</span>
               </div>
