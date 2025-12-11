@@ -310,7 +310,7 @@ export default function AyaHomeResortLanding() {
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Documento executivo desenvolvido pela <strong className="text-orange-600">Agência RPK</strong> com
-                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 15+ concorrentes</strong>
+                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 10+ concorrentes</strong>
                 (Ribeirão Pires + Mauá + ABC), <strong>análise competitiva profunda</strong>,
                 <strong> identificação de públicos-alvo qualificados</strong>, <strong>estratégias de campanha segmentadas</strong> e
                 <strong> projeções de resultados</strong> para os próximos 12 meses.
@@ -1125,21 +1125,8 @@ export default function AyaHomeResortLanding() {
                     <td className="py-4 text-gray-900">Mar/28</td>
                   </motion.tr>
                   {[
-                    // RIBEIRÃO PIRES - Expandido
+                    // RIBEIRÃO PIRES - Concorrentes reais verificados
                     { name: 'Residencial VISTTA (Toth)', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '56-80m²', price: 'R$427k-623k', date: 'Ago/26', status: 'Lançamento' },
-                    { name: 'Vila Verde Residencial', construtora: 'Construtora Regional', local: 'Ribeirão Pires', area: '70-85m²', price: 'R$580k-680k', date: '2025', status: 'Lançamento' },
-                    { name: 'Parque das Árvores', construtora: 'Verde Urbano', local: 'Ribeirão Pires', area: '92m²', price: 'R$720k', date: '2026', status: 'Lançamento' },
-                    { name: 'Ouro Verde Residence', construtora: 'Ouro Construtora', local: 'Ribeirão Pires', area: '78m²', price: 'R$580k', date: '2025', status: 'Lançamento' },
-                    { name: 'Grand Reserva RP', construtora: 'Grand Empreendimentos', local: 'Ribeirão Pires', area: '95m²', price: 'R$750k', date: '2026', status: 'Lançamento' },
-                    { name: 'Jardim Primavera', construtora: 'Primavera Incorporadora', local: 'Ribeirão Pires', area: '88m²', price: 'R$690k', date: '2025', status: 'Pré-lançamento' },
-                    { name: 'Bosque Imperial', construtora: 'Imperial Construtora', local: 'Ribeirão Pires', area: '102m²', price: 'R$820k', date: '2026', status: 'Lançamento' },
-                    { name: 'Spazio Verde Ribeirão', construtora: 'Tecnisa', local: 'Ribeirão Pires', area: '68-75m²', price: 'R$560k-650k', date: '2025', status: 'Lançamento' },
-                    { name: 'Residencial Altos da Serra', construtora: 'Rossi Residencial', local: 'Ribeirão Pires', area: '82m²', price: 'R$680k', date: '2026', status: 'Em análise' },
-                    { name: 'Vivaz Ribeirão Pires', construtora: 'MRV Engenharia', local: 'Ribeirão Pires', area: '64m²', price: 'R$485k', date: '2025', status: 'Lançamento' },
-                    { name: 'Reserva do Parque', construtora: 'Kallas Incorporações', local: 'Ribeirão Pires', area: '105m²', price: 'R$850k', date: '2026', status: 'Pré-lançamento' },
-                    { name: 'Viva Vida Ribeirão', construtora: 'Even Construtora', local: 'Ribeirão Pires', area: '76m²', price: 'R$620k', date: '2025', status: 'Em obras' },
-                    { name: 'Portal das Águas', construtora: 'Goldfarb Incorporações', local: 'Ribeirão Pires', area: '90m²', price: 'R$730k', date: '2026', status: 'Lançamento' },
-                    { name: 'Essence Ribeirão', construtora: 'PDG Realty', local: 'Ribeirão Pires', area: '72m²', price: 'R$590k', date: '2025', status: 'Lançamento' },
 
                     // MAUÁ
                     { name: 'Motiró Campo Branco', construtora: 'Motiró', local: 'Mauá', area: '57-90m²', price: 'R$600k-900k', date: '2025', status: 'Em obras' },
@@ -1175,8 +1162,8 @@ export default function AyaHomeResortLanding() {
               </table>
               <div className="mt-6 flex items-center justify-between p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">23 empreendimentos</strong> mapeados:
-                  <strong> 14 em Ribeirão Pires</strong>, <strong>4 em Mauá</strong>, <strong>5 no ABC</strong>
+                  <strong className="text-orange-600">10 empreendimentos</strong> mapeados:
+                  <strong> 1 em Ribeirão Pires</strong>, <strong>4 em Mauá</strong>, <strong>5 no ABC</strong>
                 </p>
                 <span className="text-xs text-gray-500">Atualizado: Dezembro 2025</span>
               </div>
@@ -1305,9 +1292,9 @@ export default function AyaHomeResortLanding() {
                       { text: 'Dependência de público externo (ABC + SP) para atingir meta de vendas', critical: true },
                       { text: 'Entrega em 2028 (longo prazo) pode reduzir urgência de compra', critical: false },
                       { text: 'Localização em cidade com população em queda (-4,6% em 5 anos)', critical: false },
-                      { text: 'Baixa renda per capita local (R$ 31k/ano vs R$ 39k SP)', critical: false },
+                      { text: 'Baixa renda per capita local (R$ 31k/ano vs R$ 58k média SP)', critical: false },
                       { text: 'Ausência de grandes empresas/empregos na região', critical: false },
-                      { text: 'Competição com 14 empreendimentos em Ribeirão Pires', critical: false },
+                      { text: 'Baixa oferta de concorrentes diretos em Ribeirão Pires (apenas 1 lançamento identificado)', critical: false },
                     ].map((item, i) => (
                       <motion.li
                         key={i}
@@ -1398,9 +1385,9 @@ export default function AyaHomeResortLanding() {
                 <CardContent>
                   <ul className="space-y-3">
                     {[
-                      { text: '14 concorrentes em Ribeirão Pires competindo pelo mesmo público local restrito', high: true },
+                      { text: 'Concorrentes em Mauá e ABC competindo pelo mesmo público regional', high: true },
                       { text: 'Patriani (Santo André) com marca forte e produto premium consolidado', high: true },
-                      { text: 'Lançamentos de grandes construtoras (Tecnisa, MRV, Rossi, Even) com verba robusta', high: true },
+                      { text: 'Lançamentos de grandes construtoras em Mauá e ABC com verba robusta', high: true },
                       { text: 'Crise econômica e alta de juros pode reduzir poder de compra', high: false },
                       { text: 'Resistência do público ABC em considerar Ribeirão Pires (percepção de "longe")', high: true },
                       { text: 'População local em queda (-4,6%) pode agravar escassez de público', high: false },
