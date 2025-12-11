@@ -29,6 +29,7 @@ landing-page/
 
 # PDFs and other non-essential files
 *.pdf
+!public/docs/*.pdf
 materiais/
 logorpk/
 *.jsx
