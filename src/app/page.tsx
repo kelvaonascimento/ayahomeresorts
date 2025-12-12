@@ -392,7 +392,7 @@ export default function AyaHomeResortLanding() {
                 </motion.div>
               </div>
               <p className="text-4xl font-black text-gray-900 mb-1 relative z-10">R$ 8.420</p>
-              <p className="text-sm text-gray-600 relative z-10">2.1x acima da média local</p>
+              <p className="text-sm text-green-600 font-semibold relative z-10">26% abaixo do ABC alto padrão</p>
             </motion.div>
 
             {/* Lazer */}
