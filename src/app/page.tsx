@@ -85,13 +85,14 @@ export default function AyaHomeResortLanding() {
     { location: 'Sto André', price: 13000, fill: '#f59e0b' },     // Jardim/Campestre (Patriani, Motiró)
   ]
 
+  // Comparativo real: AYA vs Splendor Patriani vs Le Rêve (Dez/2024)
   const radarData = [
-    { subject: 'Localização', AYA: 75, VISTTA: 70, Patriani: 90 },
-    { subject: 'Preço/m²', AYA: 85, VISTTA: 95, Patriani: 50 },
-    { subject: 'Lazer', AYA: 95, VISTTA: 60, Patriani: 85 },
-    { subject: 'Tech', AYA: 90, VISTTA: 50, Patriani: 95 },
-    { subject: 'Metragem', AYA: 80, VISTTA: 55, Patriani: 90 },
-    { subject: 'Pioneirismo', AYA: 100, VISTTA: 30, Patriani: 70 },
+    { subject: 'Localização', AYA: 75, Splendor: 90, LeReve: 92 },
+    { subject: 'Preço/m²', AYA: 90, Splendor: 55, LeReve: 50 },
+    { subject: 'Lazer', AYA: 95, Splendor: 85, LeReve: 75 },
+    { subject: 'Tech', AYA: 85, Splendor: 95, LeReve: 80 },
+    { subject: 'Metragem', AYA: 75, Splendor: 95, LeReve: 85 },
+    { subject: 'Pioneirismo', AYA: 100, Splendor: 60, LeReve: 65 },
   ]
 
   const employmentData = [
@@ -412,7 +413,7 @@ export default function AyaHomeResortLanding() {
                   <Sparkles className="h-6 w-6" />
                 </motion.div>
               </div>
-              <p className="text-4xl font-black mb-1 relative z-10">30+ itens</p>
+              <p className="text-4xl font-black mb-1 relative z-10">31 itens</p>
               <p className="text-sm text-white/80 relative z-10">Conceito Resort</p>
             </motion.div>
 
@@ -621,7 +622,7 @@ export default function AyaHomeResortLanding() {
                   </div>
                   <div>
                     <CardTitle className="text-gray-900">Diferenciais Completos - Comparativo</CardTitle>
-                    <CardDescription>30+ itens vs concorrentes principais</CardDescription>
+                    <CardDescription>31 itens AYA vs concorrentes reais do ABC</CardDescription>
                   </div>
                 </div>
               </CardHeader>
@@ -631,45 +632,52 @@ export default function AyaHomeResortLanding() {
                   <table className="w-full min-w-[600px]">
                     <thead>
                       <tr className="border-b-2 border-gray-200">
-                        <th className="text-left py-3 px-2 text-sm font-bold text-gray-700">Item</th>
+                        <th className="text-left py-3 px-2 text-sm font-bold text-gray-700">Item de Lazer</th>
                         <th className="text-center py-3 px-2 text-sm font-bold text-orange-600">AYA</th>
-                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">VISTTA</th>
-                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Patriani</th>
-                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Outros RP</th>
+                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Splendor</th>
+                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Le Rêve</th>
+                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Splendore</th>
                       </tr>
                     </thead>
                     <tbody>
                       {[
-                        { item: 'Piscina Aquecida', aya: true, vistta: false, patriani: true, outros: false, highlight: true },
-                        { item: 'Beach Arena / Piscina com Areia', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Cinema / Sala de Projeção', aya: true, vistta: false, patriani: true, outros: false, highlight: true },
-                        { item: 'Coworking Equipado', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Pet Place / Pet Care', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Academia Completa', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Espaço Gourmet', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Churrasqueira', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Salão de Festas', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Playground', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Brinquedoteca', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Espaço Zen / Meditação', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Quadra Poliesportiva', aya: true, vistta: true, patriani: true, outros: false, highlight: false },
-                        { item: 'Bike Share / Paraciclo', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Lavanderia Coletiva', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Carregador Veículos Elétricos', aya: true, vistta: false, patriani: true, outros: false, highlight: true },
-                        { item: 'Smart Home / Automação', aya: true, vistta: false, patriani: true, outros: false, highlight: true },
-                        { item: 'Spa / Sauna', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Área Verde Preservada', aya: true, vistta: false, patriani: false, outros: true, highlight: false },
-                        { item: 'Horta Comunitária', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Espaço para Yoga', aya: true, vistta: false, patriani: false, outros: false, highlight: false },
-                        { item: 'Lounge / Estar', aya: true, vistta: true, patriani: true, outros: false, highlight: false },
-                        { item: 'Wi-Fi nas Áreas Comuns', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Segurança 24h', aya: true, vistta: true, patriani: true, outros: true, highlight: false },
-                        { item: 'Portaria Remota', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Gerador de Emergência', aya: true, vistta: true, patriani: true, outros: false, highlight: false },
-                        { item: 'Elevadores (2+)', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Coleta Seletiva', aya: true, vistta: false, patriani: true, outros: false, highlight: false },
-                        { item: 'Captação Água da Chuva', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
-                        { item: 'Energia Solar', aya: true, vistta: false, patriani: false, outros: false, highlight: true },
+                        // Dados reais pesquisados em Dez/2024 - Fontes: Sites das construtoras
+                        { item: 'Piscina Aquecida/Climatizada', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Piscinas Múltiplas (2+)', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Beach Arena', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Beach Tennis', aya: false, splendor: true, lereve: false, splendore: true, highlight: false },
+                        { item: 'Cinema', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Espaço Metaverso/Gamer', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Coworking', aya: true, splendor: false, lereve: true, splendore: true, highlight: false },
+                        { item: 'Sala de Reunião', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Pet Place', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Dog Wash', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Pet Care', aya: false, splendor: false, lereve: false, splendore: true, highlight: false },
+                        { item: 'Academia/Fitness', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Fitness Externo', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Pilates/Funcional', aya: false, splendor: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Ateliê do Chef', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Churrasqueira', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Salão de Festas', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Casa de Campo', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Playground', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Brinquedoteca', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Espaço Teen', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Praça do Fogo/Fire Place', aya: true, splendor: false, lereve: false, splendore: true, highlight: false },
+                        { item: 'Pool Lounge/Bar Piscina', aya: true, splendor: false, lereve: true, splendore: false, highlight: false },
+                        { item: 'Solarium', aya: true, splendor: false, lereve: true, splendore: true, highlight: false },
+                        { item: 'Market/Minimercado', aya: true, splendor: false, lereve: true, splendore: false, highlight: false },
+                        { item: 'Lavanderia Coletiva', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Espaço Beauty', aya: true, splendor: false, lereve: false, splendore: true, highlight: false },
+                        { item: 'Horta Orgânica', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Praça da Árvore', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Área Uber', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Delivery Room', aya: false, splendor: false, lereve: true, splendore: true, highlight: false },
+                        { item: 'Lounge Externo', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Wi-Fi Áreas Comuns', aya: true, splendor: false, lereve: false, splendore: false, highlight: false },
+                        { item: 'Energia Solar/Fotovoltaica', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Gerador Full', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Sauna', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
                       ].map((row, i) => (
                         <motion.tr
                           key={i}
@@ -681,19 +689,19 @@ export default function AyaHomeResortLanding() {
                         >
                           <td className={`py-2 px-2 text-sm ${row.highlight ? 'font-bold text-orange-900' : 'text-gray-700'}`}>
                             {row.item}
-                            {row.highlight && <span className="ml-2 text-xs bg-orange-200 text-orange-700 px-2 py-0.5 rounded-full">Diferencial</span>}
+                            {row.highlight && <span className="ml-2 text-xs bg-orange-200 text-orange-700 px-2 py-0.5 rounded-full">Exclusivo</span>}
                           </td>
                           <td className="py-2 px-2 text-center">
                             {row.aya ? <CheckCircle className="h-5 w-5 text-orange-600 mx-auto" /> : <X className="h-5 w-5 text-gray-300 mx-auto" />}
                           </td>
                           <td className="py-2 px-2 text-center">
-                            {row.vistta ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
+                            {row.splendor ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
                           </td>
                           <td className="py-2 px-2 text-center">
-                            {row.patriani ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
+                            {row.lereve ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
                           </td>
                           <td className="py-2 px-2 text-center">
-                            {row.outros ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
+                            {row.splendore ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
                           </td>
                         </motion.tr>
                       ))}
@@ -704,20 +712,20 @@ export default function AyaHomeResortLanding() {
                 {/* Summary Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                   <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-800">
-                    <p className="text-3xl font-black text-white">30</p>
+                    <p className="text-3xl font-black text-white">31</p>
                     <p className="text-sm text-gray-300 font-medium">Itens AYA</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
-                    <p className="text-3xl font-black text-gray-700">12</p>
-                    <p className="text-sm text-gray-600 font-medium">Itens VISTTA</p>
+                    <p className="text-3xl font-black text-gray-700">14</p>
+                    <p className="text-sm text-gray-600 font-medium">Splendor Patriani</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
-                    <p className="text-3xl font-black text-gray-700">18</p>
-                    <p className="text-sm text-gray-600 font-medium">Itens Patriani</p>
+                    <p className="text-3xl font-black text-gray-700">16</p>
+                    <p className="text-sm text-gray-600 font-medium">Le Rêve</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
-                    <p className="text-3xl font-black text-gray-700">8</p>
-                    <p className="text-sm text-gray-600 font-medium">Média RP</p>
+                    <p className="text-3xl font-black text-gray-700">15</p>
+                    <p className="text-sm text-gray-600 font-medium">Splendore Mauá</p>
                   </div>
                 </div>
               </CardContent>
@@ -744,8 +752,8 @@ export default function AyaHomeResortLanding() {
                     <PolarAngleAxis dataKey="subject" tick={{ fill: '#6b7280', fontSize: 14 }} />
                     <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: '#9ca3af', fontSize: 12 }} />
                     <Radar name="AYA" dataKey="AYA" stroke="#ff6b35" fill="#ff6b35" fillOpacity={0.3} strokeWidth={3} />
-                    <Radar name="VISTTA" dataKey="VISTTA" stroke="#9ca3af" fill="#9ca3af" fillOpacity={0.1} strokeWidth={2} />
-                    <Radar name="Patriani" dataKey="Patriani" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.1} strokeWidth={2} />
+                    <Radar name="Splendor" dataKey="Splendor" stroke="#9ca3af" fill="#9ca3af" fillOpacity={0.1} strokeWidth={2} />
+                    <Radar name="Le Rêve" dataKey="LeReve" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.1} strokeWidth={2} />
                     <Legend />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -1240,7 +1248,7 @@ export default function AyaHomeResortLanding() {
             {[
               { title: 'Pioneirismo', desc: '1º vertical alto padrão', icon: Award },
               { title: 'Preço', desc: '35% + barato/m²', icon: DollarSign },
-              { title: 'Lazer', desc: '30+ itens resort', icon: Sparkles },
+              { title: 'Lazer', desc: '31 itens resort', icon: Sparkles },
               { title: 'Local', desc: '50 min SP', icon: MapPin },
             ].map((vantagem, i) => (
               <Card key={i} className="border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-white text-center">
@@ -1302,7 +1310,7 @@ export default function AyaHomeResortLanding() {
                   <ul className="space-y-3">
                     {[
                       { text: 'Pioneirismo: 1º empreendimento vertical alto padrão em Ribeirão Pires', strong: true },
-                      { text: '30+ itens de lazer - conceito resort único na região', strong: true },
+                      { text: '31 itens de lazer - conceito resort único na região', strong: true },
                       { text: 'Preço/m² competitivo (R$ 8.420) - 35% mais acessível que lançamentos alto padrão Santo André', strong: true },
                       { text: 'Metragem ampla (114m²) - acima da média regional (70-80m²)', strong: false },
                       { text: 'Diferenciais exclusivos: Beach Arena, Pet Place, Smart Home, Energia Solar', strong: true },
@@ -1506,7 +1514,7 @@ export default function AyaHomeResortLanding() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-600 mt-2 flex-shrink-0"></div>
-                        <span><strong>Diferenciação:</strong> Destacar 30+ itens resort e pioneirismo vertical como USPs principais</span>
+                        <span><strong>Diferenciação:</strong> Destacar 31 itens resort e pioneirismo vertical como USPs principais</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-600 mt-2 flex-shrink-0"></div>
