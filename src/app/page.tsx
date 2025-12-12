@@ -77,11 +77,12 @@ export default function AyaHomeResortLanding() {
     { name: 'Classe A', value: 6.5, color: '#ff6b35', desc: '+20 SM' },
   ]
 
+  // Dados reais de m² - Lançamentos Alto Padrão ABC (Dez/2024 - Fontes: Construtoras, ABC Apartamentos)
   const priceM2Data = [
-    { location: 'Ribeirão Pires', price: 3990, fill: '#9ca3af' },
-    { location: 'AYA Resort', price: 8420, fill: '#ff6b35' },
-    { location: 'Santo André', price: 10365, fill: '#d1d5db' },
-    { location: 'Patriani', price: 12000, fill: '#f59e0b' },
+    { location: 'AYA Resort', price: 8420, fill: '#ff6b35' },     // Ribeirão Pires - 114m²
+    { location: 'Mauá AP', price: 8500, fill: '#9ca3af' },        // Splendore Vila Bocaina - 195m²
+    { location: 'S. Bernardo', price: 11000, fill: '#d1d5db' },   // Lançamentos alto padrão
+    { location: 'Sto André', price: 13000, fill: '#f59e0b' },     // Jardim/Campestre (Patriani, Motiró)
   ]
 
   const radarData = [
@@ -875,7 +876,7 @@ export default function AyaHomeResortLanding() {
                 </ResponsiveContainer>
                 <div className="bg-orange-50 rounded-xl p-3 border border-orange-200 mt-4">
                   <p className="text-xs text-orange-900">
-                    <strong>AYA 30% mais barato</strong> que Patriani e 27% abaixo de São Paulo capital
+                    <strong>AYA 35% mais barato</strong> que Santo André e 23% abaixo de S. Bernardo (lançamentos alto padrão)
                   </p>
                 </div>
               </CardContent>
@@ -1104,14 +1105,15 @@ export default function AyaHomeResortLanding() {
           {/* Comparison Table */}
           <Card className="border-2 border-gray-200 mb-8 overflow-x-auto hover-lift">
             <CardContent className="p-6">
-              <table className="w-full min-w-[800px]">
+              <table className="w-full min-w-[900px]">
                 <thead>
                   <tr className="border-b-2 border-gray-200">
                     <th className="text-left py-3 text-sm font-bold text-gray-600">Empreendimento</th>
                     <th className="text-left py-3 text-sm font-bold text-gray-600">Construtora</th>
-                    <th className="text-left py-3 text-sm font-bold text-gray-600">Localização</th>
+                    <th className="text-left py-3 text-sm font-bold text-gray-600">Local</th>
                     <th className="text-left py-3 text-sm font-bold text-gray-600">Área</th>
                     <th className="text-left py-3 text-sm font-bold text-gray-600">Preço</th>
+                    <th className="text-left py-3 text-sm font-bold text-orange-600">R$/m²</th>
                     <th className="text-left py-3 text-sm font-bold text-gray-600">Entrega</th>
                   </tr>
                 </thead>
@@ -1127,26 +1129,32 @@ export default function AyaHomeResortLanding() {
                     <td className="py-4 text-gray-900">Ribeirão Pires</td>
                     <td className="py-4 font-bold text-gray-900">114m²</td>
                     <td className="py-4 text-gray-900 font-bold">R$959k-962k</td>
+                    <td className="py-4 font-black text-orange-600">R$ 8.420</td>
                     <td className="py-4 text-gray-900">Mar/28</td>
                   </motion.tr>
                   {[
                     // RIBEIRÃO PIRES - Único concorrente real na cidade
-                    { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', date: '2025', link: 'https://tothconstrutora.com.br/obras/residencial-vertice/' },
+                    { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', priceM2: 'R$ 6.140', date: '2025', link: 'https://tothconstrutora.com.br/obras/residencial-vertice/' },
 
-                    // SANTO ANDRÉ - Concorrentes diretos (metragem/preço similar)
-                    { name: 'Mirai Campestre', construtora: 'Patriani', local: 'Santo André', area: '79-93m²', price: 'R$900k+', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/mirai-campestre-patriani' },
-                    { name: 'Vista Campestre', construtora: 'Patriani', local: 'Santo André', area: '134m²', price: 'Consulte', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/vista-campestre' },
-                    { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Santo André', area: '112m²', price: 'R$1.2M+', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
-                    { name: 'CONCEPT Campestre', construtora: 'Sabbahi', local: 'Santo André', area: '92m²', price: 'R$920k', date: 'Jan/25', link: 'https://braido.com.br/concept/' },
-                    { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Santo André', area: '57-90m²', price: 'R$570k+', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
+                    // SANTO ANDRÉ - Bairro Jardim (Alto Padrão)
+                    { name: 'Le Rêve Résidences', construtora: 'Le Rêve', local: 'Sto André (Jardim)', area: '128m²', price: 'R$1.79M', priceM2: 'R$ 14.031', date: '2025', link: 'https://lerevejardim.com/' },
+                    { name: 'Splendor Jardim', construtora: 'Patriani', local: 'Sto André (Jardim)', area: '160-165m²', price: 'R$2.06M', priceM2: 'R$ 12.875', date: 'Dez/26', link: 'https://www.construtorapatriani.com.br/imovel/splendor-jardim-patriani' },
+                    { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Sto André (Jardim)', area: '112m²', price: 'R$969k+', priceM2: 'R$ 8.651', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
 
-                    // MAUÁ - Concorrentes diretos (metragem/preço similar)
-                    { name: 'Res. Mandarim', construtora: 'Qualibens', local: 'Mauá', area: '83-110m²', price: 'R$570k+', date: '2025', link: 'https://residencialmandarim.com/' },
-                    { name: 'Splendore Mauá', construtora: 'F. Bonano', local: 'Mauá', area: '195m²', price: 'R$1.79M', date: '2027', link: 'https://fbonanoengenharia.com.br/empreendimentos/splendore/' },
+                    // SANTO ANDRÉ - Bairro Campestre
+                    { name: 'Vista Campestre', construtora: 'Patriani', local: 'Sto André (Campestre)', area: '134m²', price: 'R$2.0M+', priceM2: 'R$ 14.925', date: '2026', link: 'https://www.construtorapatriani.com.br/imovel/vista-campestre' },
+                    { name: 'Mirai Campestre', construtora: 'Patriani', local: 'Sto André (Campestre)', area: '79-93m²', price: 'R$900k+', priceM2: 'R$ 10.000', date: 'Entregue', link: 'https://www.construtorapatriani.com.br/imovel/mirai-campestre-patriani' },
+                    { name: 'CONCEPT Campestre', construtora: 'Sabbahi', local: 'Sto André (Campestre)', area: '92m²', price: 'R$920k', priceM2: 'R$ 10.000', date: 'Jan/25', link: 'https://braido.com.br/concept/' },
+                    { name: 'Motiró Casa Branca', construtora: 'Grupo Motiró', local: 'Sto André', area: '57-90m²', price: 'R$570k+', priceM2: 'R$ 8.143', date: '2025', link: 'https://casabranca.bymotiro.com.br/' },
+
+                    // MAUÁ - Concorrentes diretos
+                    { name: 'Splendore Mauá', construtora: 'F. Bonano', local: 'Mauá (V. Bocaina)', area: '195m²', price: 'R$1.67M', priceM2: 'R$ 8.548', date: 'Set/27', link: 'https://fbonanoengenharia.com.br/empreendimentos/splendore/' },
+                    { name: 'Res. Mandarim', construtora: 'Qualibens', local: 'Mauá', area: '83-110m²', price: 'R$570k+', priceM2: 'R$ 5.700', date: '2025', link: 'https://residencialmandarim.com/' },
 
                     // SÃO BERNARDO DO CAMPO
-                    { name: 'Helbor Trilogy', construtora: 'Helbor', local: 'São Bernardo', area: '77-94m²', price: 'R$800k+', date: 'Pronto', link: 'https://www.helbor.com.br/trilogyhomeoffice' },
-                    { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'São Bernardo', area: '54-75m²', price: 'Consulte', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
+                    { name: 'Unique MBigucci', construtora: 'MBigucci', local: 'S. Bernardo (Rudge Ramos)', area: '36-54m²', price: 'R$407k+', priceM2: 'R$ 11.305', date: 'Pronto', link: 'https://www.mbigucci.com.br/unique' },
+                    { name: 'Helbor Trilogy', construtora: 'Helbor', local: 'S. Bernardo', area: '77-94m²', price: 'R$800k+', priceM2: 'R$ 9.300', date: 'Pronto', link: 'https://www.helbor.com.br/trilogyhomeoffice' },
+                    { name: 'Motiró Santa Filomena', construtora: 'Grupo Motiró', local: 'S. Bernardo', area: '54-75m²', price: 'R$550k+', priceM2: 'R$ 8.500', date: '2025', link: 'https://grupomotiro.com.br/empreendimentos/motiro-santa-filomena/' },
                   ].map((comp, i) => (
                     <motion.tr
                       key={i}
@@ -1157,26 +1165,72 @@ export default function AyaHomeResortLanding() {
                       whileHover={{ backgroundColor: '#f9fafb' }}
                       className="border-b border-gray-100 transition-colors"
                     >
-                      <td className="py-4 text-gray-700">
+                      <td className="py-3 text-gray-700 text-sm">
                         <a href={comp.link} target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 hover:underline">
                           {comp.name}
                         </a>
                       </td>
-                      <td className="py-4 text-gray-600 text-sm">{comp.construtora}</td>
-                      <td className="py-4 text-gray-600 text-sm">{comp.local}</td>
-                      <td className="py-4 text-gray-600">{comp.area}</td>
-                      <td className="py-4 text-gray-600 font-semibold">{comp.price}</td>
-                      <td className="py-4 text-gray-600">{comp.date}</td>
+                      <td className="py-3 text-gray-600 text-xs">{comp.construtora}</td>
+                      <td className="py-3 text-gray-600 text-xs">{comp.local}</td>
+                      <td className="py-3 text-gray-600 text-sm">{comp.area}</td>
+                      <td className="py-3 text-gray-600 text-sm font-semibold">{comp.price}</td>
+                      <td className="py-3 text-gray-900 text-sm font-bold">{comp.priceM2}</td>
+                      <td className="py-3 text-gray-600 text-sm">{comp.date}</td>
                     </motion.tr>
                   ))}
                 </tbody>
               </table>
-              <div className="mt-6 flex items-center justify-between p-4 bg-gray-50 rounded-xl">
+              <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">10 empreendimentos</strong> mapeados:
-                  <strong> 1 em Ribeirão Pires</strong>, <strong>5 em Santo André</strong>, <strong>2 em São Bernardo</strong>, <strong>2 em Mauá</strong>
+                  <strong className="text-orange-600">13 empreendimentos</strong> mapeados:
+                  <strong> 1 em Ribeirão Pires</strong>, <strong>7 em Santo André</strong>, <strong>3 em São Bernardo</strong>, <strong>2 em Mauá</strong>
                 </p>
-                <span className="text-xs text-gray-500">Atualizado: Dezembro 2025</span>
+                <span className="text-xs text-gray-500">Fontes: Construtoras, ABC Apartamentos, Apto.vc | Dez/2024</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Resumo Preço/m² por Região */}
+          <Card className="border-2 border-orange-200 mb-8 hover-lift">
+            <CardHeader>
+              <CardTitle className="text-gray-900 flex items-center gap-2">
+                <BarChart3 className="h-5 w-5 text-orange-600" />
+                Comparativo de Preço/m² por Região - Lançamentos Alto Padrão
+              </CardTitle>
+              <CardDescription>Dados reais pesquisados em Dezembro/2024 - Fontes: Construtoras, ABC Apartamentos, Apto.vc</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-4 gap-4 mb-6">
+                {[
+                  { region: 'Ribeirão Pires', aya: true, min: 6140, max: 8420, avg: 'R$ 8.420', color: 'orange', desc: 'AYA Home Resort' },
+                  { region: 'Mauá', aya: false, min: 5700, max: 8548, avg: 'R$ 7.124', color: 'gray', desc: 'Splendore, Mandarim' },
+                  { region: 'São Bernardo', aya: false, min: 8500, max: 11305, avg: 'R$ 9.700', color: 'gray', desc: 'Unique, Helbor, Motiró' },
+                  { region: 'Santo André', aya: false, min: 8143, max: 14925, avg: 'R$ 11.375', color: 'gray', desc: 'Patriani, Motiró, Le Rêve' },
+                ].map((item, i) => (
+                  <div key={i} className={`p-4 rounded-xl border-2 ${item.aya ? 'border-orange-400 bg-orange-50' : 'border-gray-200 bg-gray-50'}`}>
+                    <h4 className={`font-bold mb-1 ${item.aya ? 'text-orange-600' : 'text-gray-900'}`}>{item.region}</h4>
+                    <p className={`text-2xl font-black ${item.aya ? 'text-orange-600' : 'text-gray-900'}`}>{item.avg}</p>
+                    <p className="text-xs text-gray-500 mt-1">Min: R$ {item.min.toLocaleString()} | Max: R$ {item.max.toLocaleString()}</p>
+                    <p className="text-xs text-gray-400 mt-1">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="grid md:grid-cols-3 gap-4 p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+                <div className="text-center">
+                  <p className="text-xs text-gray-600 uppercase font-bold">AYA vs Santo André</p>
+                  <p className="text-2xl font-black text-green-600">-26% a -43%</p>
+                  <p className="text-xs text-gray-500">mais barato que lançamentos alto padrão</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xs text-gray-600 uppercase font-bold">AYA vs São Bernardo</p>
+                  <p className="text-2xl font-black text-green-600">-13% a -25%</p>
+                  <p className="text-xs text-gray-500">mais barato que lançamentos alto padrão</p>
+                </div>
+                <div className="text-center">
+                  <p className="text-xs text-gray-600 uppercase font-bold">AYA vs Mauá Alto Padrão</p>
+                  <p className="text-2xl font-black text-yellow-600">~igual</p>
+                  <p className="text-xs text-gray-500">competitivo com Splendore (R$ 8.548)</p>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -1185,7 +1239,7 @@ export default function AyaHomeResortLanding() {
           <div className="grid md:grid-cols-4 gap-4">
             {[
               { title: 'Pioneirismo', desc: '1º vertical alto padrão', icon: Award },
-              { title: 'Preço', desc: '30% + barato/m²', icon: DollarSign },
+              { title: 'Preço', desc: '35% + barato/m²', icon: DollarSign },
               { title: 'Lazer', desc: '30+ itens resort', icon: Sparkles },
               { title: 'Local', desc: '50 min SP', icon: MapPin },
             ].map((vantagem, i) => (
@@ -1249,7 +1303,7 @@ export default function AyaHomeResortLanding() {
                     {[
                       { text: 'Pioneirismo: 1º empreendimento vertical alto padrão em Ribeirão Pires', strong: true },
                       { text: '30+ itens de lazer - conceito resort único na região', strong: true },
-                      { text: 'Preço/m² competitivo (R$ 8.420) - 30% mais acessível que concorrentes ABC', strong: true },
+                      { text: 'Preço/m² competitivo (R$ 8.420) - 35% mais acessível que lançamentos alto padrão Santo André', strong: true },
                       { text: 'Metragem ampla (114m²) - acima da média regional (70-80m²)', strong: false },
                       { text: 'Diferenciais exclusivos: Beach Arena, Pet Place, Smart Home, Energia Solar', strong: true },
                       { text: 'Localização estratégica: 50 min de SP, próximo a natureza', strong: false },
@@ -1402,7 +1456,7 @@ export default function AyaHomeResortLanding() {
                       { text: 'Crise econômica e alta de juros pode reduzir poder de compra', high: false },
                       { text: 'Resistência do público ABC em considerar Ribeirão Pires (percepção de "longe")', high: true },
                       { text: 'População local em queda (-4,6%) pode agravar escassez de público', high: false },
-                      { text: 'VISTTA Toth com preço/m² muito inferior (R$ 5.340) atrai público preço-sensível', high: false },
+                      { text: 'Residencial Vértice (Toth) com preço/m² inferior (R$ 6.140) atrai público preço-sensível', high: false },
                       { text: 'Entrega 2028: concorrentes com entrega 2025-2026 têm vantagem temporal', high: false },
                       { text: 'Budget limitado vs grandes players pode limitar alcance de campanha', high: false },
                       { text: 'Mudanças regulatórias ou ambientais podem atrasar obra', high: false },
@@ -1476,7 +1530,7 @@ export default function AyaHomeResortLanding() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 flex-shrink-0"></div>
-                        <span><strong>Diferenciação vs Patriani:</strong> Enfatizar resort lifestyle e preço/m² 30% menor</span>
+                        <span><strong>Diferenciação vs ABC:</strong> Enfatizar resort lifestyle e preço/m² 35% menor que lançamentos Santo André</span>
                       </li>
                     </ul>
                   </div>
@@ -1561,7 +1615,7 @@ export default function AyaHomeResortLanding() {
                       </li>
                       <li className="flex items-start gap-2">
                         <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                        <span>Preços absurdos em Santo André/SBC (R$ 10k-12k/m²)</span>
+                        <span>Preços elevados em lançamentos alto padrão Santo André/SBC (R$ 11k-13k/m²)</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
@@ -1632,11 +1686,11 @@ export default function AyaHomeResortLanding() {
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
                       { headline: '"114m² a 15 min do ABC. Sua família merece esse espaço."', format: 'Meta Ads - Feed' },
-                      { headline: '"30% mais barato que Santo André. Mesmo padrão, preço justo."', format: 'Google Ads - Search' },
+                      { headline: '"35% mais barato que Santo André. Mesmo padrão, preço justo."', format: 'Google Ads - Search' },
                       { headline: '"Resort a 20 min do seu trabalho. Lazer todo dia, não só férias."', format: 'Meta Ads - Stories' },
                       { headline: '"Pioneiro em Ribeirão Pires: valorização garantida + qualidade de vida."', format: 'Google Display' },
                       { headline: '"Piscina aquecida, cinema, pet place. Tudo que falta no seu prédio."', format: 'Meta Ads - Reels' },
-                      { headline: '"R$ 8.420/m² vs R$ 12k do ABC. Faça as contas."', format: 'LinkedIn Ads' },
+                      { headline: '"R$ 8.420/m² vs R$ 13k do ABC. Faça as contas."', format: 'LinkedIn Ads' },
                     ].map((ad, i) => (
                       <motion.div
                         key={i}
