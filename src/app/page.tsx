@@ -79,20 +79,21 @@ export default function AyaHomeResortLanding() {
 
   // Dados reais de m² - Lançamentos Alto Padrão ABC (Dez/2024 - Fontes: Construtoras, ABC Apartamentos)
   const priceM2Data = [
+    { location: 'R.G. Serra', price: 6150, fill: '#10b981' },     // Rio Grande da Serra - Joias da Serra 50-52m²
     { location: 'AYA Resort', price: 8420, fill: '#ff6b35' },     // Ribeirão Pires - 114m²
     { location: 'Mauá AP', price: 8500, fill: '#9ca3af' },        // Splendore Vila Bocaina - 195m²
     { location: 'S. Bernardo', price: 11000, fill: '#d1d5db' },   // Lançamentos alto padrão
     { location: 'Sto André', price: 13000, fill: '#f59e0b' },     // Jardim/Campestre (Patriani, Motiró)
   ]
 
-  // Comparativo real: AYA vs Splendor Patriani vs Le Rêve (Dez/2024)
+  // Comparativo real: AYA vs Splendor Patriani vs Le Rêve vs Marbella (Dez/2024)
   const radarData = [
-    { subject: 'Localização', AYA: 75, Splendor: 90, LeReve: 92 },
-    { subject: 'Preço/m²', AYA: 90, Splendor: 55, LeReve: 50 },
-    { subject: 'Lazer', AYA: 95, Splendor: 85, LeReve: 75 },
-    { subject: 'Tech', AYA: 85, Splendor: 95, LeReve: 80 },
-    { subject: 'Metragem', AYA: 75, Splendor: 95, LeReve: 85 },
-    { subject: 'Pioneirismo', AYA: 100, Splendor: 60, LeReve: 65 },
+    { subject: 'Localização', AYA: 75, Splendor: 90, LeReve: 92, Marbella: 75 },
+    { subject: 'Preço/m²', AYA: 90, Splendor: 55, LeReve: 50, Marbella: 95 },
+    { subject: 'Lazer', AYA: 95, Splendor: 85, LeReve: 75, Marbella: 55 },
+    { subject: 'Tech', AYA: 85, Splendor: 95, LeReve: 80, Marbella: 40 },
+    { subject: 'Metragem', AYA: 75, Splendor: 95, LeReve: 85, Marbella: 60 },
+    { subject: 'Pioneirismo', AYA: 100, Splendor: 60, LeReve: 65, Marbella: 45 },
   ]
 
   const employmentData = [
@@ -312,8 +313,8 @@ export default function AyaHomeResortLanding() {
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Documento executivo desenvolvido pela <strong className="text-orange-600">Agência RPK</strong> com
-                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 10 concorrentes verificados</strong>
-                (Ribeirão Pires + Santo André + ABC), <strong>análise competitiva profunda</strong>,
+                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 14 concorrentes verificados</strong>
+                (Ribeirão Pires + Rio Grande da Serra + Santo André + ABC), <strong>análise competitiva profunda</strong>,
                 <strong> identificação de públicos-alvo qualificados</strong>, <strong>estratégias de campanha segmentadas</strong> e
                 <strong> projeções de resultados</strong> para os próximos 12 meses.
               </p>
@@ -754,6 +755,7 @@ export default function AyaHomeResortLanding() {
                     <Radar name="AYA" dataKey="AYA" stroke="#ff6b35" fill="#ff6b35" fillOpacity={0.3} strokeWidth={3} />
                     <Radar name="Splendor" dataKey="Splendor" stroke="#9ca3af" fill="#9ca3af" fillOpacity={0.1} strokeWidth={2} />
                     <Radar name="Le Rêve" dataKey="LeReve" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.1} strokeWidth={2} />
+                    <Radar name="Marbella" dataKey="Marbella" stroke="#10b981" fill="#10b981" fillOpacity={0.1} strokeWidth={2} />
                     <Legend />
                   </RadarChart>
                 </ResponsiveContainer>
@@ -1141,8 +1143,13 @@ export default function AyaHomeResortLanding() {
                     <td className="py-4 text-gray-900">Mar/28</td>
                   </motion.tr>
                   {[
-                    // RIBEIRÃO PIRES - Único concorrente real na cidade
+                    // RIBEIRÃO PIRES - Concorrentes na cidade
                     { name: 'Residencial Vértice', construtora: 'Toth Construtora', local: 'Ribeirão Pires', area: '40-57m²', price: 'R$270k-350k', priceM2: 'R$ 6.140', date: '2025', link: 'https://tothconstrutora.com.br/obras/residencial-vertice/' },
+                    { name: 'Residencial Marbella', construtora: 'RG Imobiliária', local: 'Ribeirão Pires', area: '50-91m²', price: 'R$355k-637k', priceM2: 'R$ 7.000', date: '2025', link: '#' },
+                    { name: 'Residencial Nevada', construtora: 'RG Imobiliária', local: 'Ribeirão Pires (Centro)', area: '34-57m²', price: 'R$251k-413k', priceM2: 'R$ 7.250', date: '2025', link: '#' },
+
+                    // RIO GRANDE DA SERRA - Novo concorrente regional
+                    { name: 'Joias da Serra', construtora: 'Leoma Engenharia', local: 'Rio Grande da Serra', area: '50-52m²', price: 'R$308k-324k', priceM2: 'R$ 6.150', date: '2025', link: '#' },
 
                     // SANTO ANDRÉ - Bairro Jardim (Alto Padrão)
                     { name: 'Le Rêve Résidences', construtora: 'Le Rêve', local: 'Sto André (Jardim)', area: '128m²', price: 'R$1.79M', priceM2: 'R$ 14.031', date: '2025', link: 'https://lerevejardim.com/' },
@@ -1190,8 +1197,8 @@ export default function AyaHomeResortLanding() {
               </table>
               <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">13 empreendimentos</strong> mapeados:
-                  <strong> 1 em Ribeirão Pires</strong>, <strong>7 em Santo André</strong>, <strong>3 em São Bernardo</strong>, <strong>2 em Mauá</strong>
+                  <strong className="text-orange-600">16 empreendimentos</strong> mapeados:
+                  <strong> 3 em Ribeirão Pires</strong>, <strong>1 em Rio Grande da Serra</strong>, <strong>7 em Santo André</strong>, <strong>3 em São Bernardo</strong>, <strong>2 em Mauá</strong>
                 </p>
                 <span className="text-xs text-gray-500">Fontes: Construtoras, ABC Apartamentos, Apto.vc | Dez/2024</span>
               </div>
@@ -1208,9 +1215,10 @@ export default function AyaHomeResortLanding() {
               <CardDescription>Dados reais pesquisados em Dezembro/2024 - Fontes: Construtoras, ABC Apartamentos, Apto.vc</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-4 gap-4 mb-6">
+              <div className="grid md:grid-cols-5 gap-4 mb-6">
                 {[
-                  { region: 'Ribeirão Pires', aya: true, min: 6140, max: 8420, avg: 'R$ 8.420', color: 'orange', desc: 'AYA Home Resort' },
+                  { region: 'Ribeirão Pires', aya: true, min: 6140, max: 8420, avg: 'R$ 8.420', color: 'orange', desc: 'AYA, Vértice, Marbella, Nevada' },
+                  { region: 'R. G. da Serra', aya: false, min: 6150, max: 6150, avg: 'R$ 6.150', color: 'gray', desc: 'Joias da Serra' },
                   { region: 'Mauá', aya: false, min: 5700, max: 8548, avg: 'R$ 7.124', color: 'gray', desc: 'Splendore, Mandarim' },
                   { region: 'São Bernardo', aya: false, min: 8500, max: 11305, avg: 'R$ 9.700', color: 'gray', desc: 'Unique, Helbor, Motiró' },
                   { region: 'Santo André', aya: false, min: 8143, max: 14925, avg: 'R$ 11.375', color: 'gray', desc: 'Patriani, Motiró, Le Rêve' },
