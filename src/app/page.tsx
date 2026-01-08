@@ -77,23 +77,24 @@ export default function AyaHomeResortLanding() {
     { name: 'Classe A', value: 6.5, color: '#ff6b35', desc: '+20 SM' },
   ]
 
-  // Dados reais de m² - Lançamentos Alto Padrão ABC (Dez/2024 - Fontes: Construtoras, ABC Apartamentos)
+  // Dados reais de m² - Lançamentos Alto Padrão ABC (Jan/2025 - Fontes: Construtoras, ABC Apartamentos)
   const priceM2Data = [
     { location: 'R.G. Serra', price: 6150, fill: '#10b981' },     // Rio Grande da Serra - Joias da Serra 50-52m²
     { location: 'AYA Resort', price: 8420, fill: '#ff6b35' },     // Ribeirão Pires - 114m²
     { location: 'Mauá AP', price: 8500, fill: '#9ca3af' },        // Splendore Vila Bocaina - 195m²
     { location: 'S. Bernardo', price: 11000, fill: '#d1d5db' },   // Lançamentos alto padrão
-    { location: 'Sto André', price: 13000, fill: '#f59e0b' },     // Jardim/Campestre (Patriani, Motiró)
+    { location: 'Sto André', price: 15000, fill: '#f59e0b' },     // Alto padrão: Grand Resort R$17k, Le Rêve R$14k, Splendor R$13k
   ]
 
-  // Comparativo real: AYA vs Splendor Patriani vs Le Rêve vs Marbella (Dez/2024)
+  // Comparativo real: AYA vs Grand Resort vs Le Rêve vs Marbella (Jan/2025)
+  // Lazer baseado em quantidade: Grand=51, AYA=29, LeReve=16, Marbella=~12 itens
   const radarData = [
-    { subject: 'Localização', AYA: 75, Splendor: 90, LeReve: 92, Marbella: 75 },
-    { subject: 'Preço/m²', AYA: 90, Splendor: 55, LeReve: 50, Marbella: 95 },
-    { subject: 'Lazer', AYA: 95, Splendor: 85, LeReve: 75, Marbella: 55 },
-    { subject: 'Tech', AYA: 85, Splendor: 95, LeReve: 80, Marbella: 40 },
-    { subject: 'Metragem', AYA: 75, Splendor: 95, LeReve: 85, Marbella: 60 },
-    { subject: 'Pioneirismo', AYA: 100, Splendor: 60, LeReve: 65, Marbella: 45 },
+    { subject: 'Localização', AYA: 75, Grand: 92, LeReve: 92, Marbella: 75 },
+    { subject: 'Preço/m²', AYA: 90, Grand: 40, LeReve: 50, Marbella: 95 },
+    { subject: 'Lazer', AYA: 60, Grand: 100, LeReve: 35, Marbella: 30 },
+    { subject: 'Tech', AYA: 85, Grand: 85, LeReve: 80, Marbella: 40 },
+    { subject: 'Metragem', AYA: 75, Grand: 70, LeReve: 85, Marbella: 60 },
+    { subject: 'Pioneirismo', AYA: 100, Grand: 80, LeReve: 65, Marbella: 45 },
   ]
 
   const employmentData = [
@@ -313,7 +314,7 @@ export default function AyaHomeResortLanding() {
               </p>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 Documento executivo desenvolvido pela <strong className="text-orange-600">Agência RPK</strong> com
-                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 14 concorrentes verificados</strong>
+                <strong> levantamento de dados demográficos</strong>, <strong>mapeamento de 17 concorrentes verificados</strong>
                 (Ribeirão Pires + Rio Grande da Serra + Santo André + ABC), <strong>análise competitiva profunda</strong>,
                 <strong> identificação de públicos-alvo qualificados</strong>, <strong>estratégias de campanha segmentadas</strong> e
                 <strong> projeções de resultados</strong> para os próximos 12 meses.
@@ -623,7 +624,7 @@ export default function AyaHomeResortLanding() {
                   </div>
                   <div>
                     <CardTitle className="text-gray-900">Diferenciais Completos - Comparativo</CardTitle>
-                    <CardDescription>31 itens AYA vs concorrentes reais do ABC</CardDescription>
+                    <CardDescription>42 itens comparados - AYA vs concorrentes reais do ABC</CardDescription>
                   </div>
                 </div>
               </CardHeader>
@@ -635,50 +636,57 @@ export default function AyaHomeResortLanding() {
                       <tr className="border-b-2 border-gray-200">
                         <th className="text-left py-3 px-2 text-sm font-bold text-gray-700">Item de Lazer</th>
                         <th className="text-center py-3 px-2 text-sm font-bold text-orange-600">AYA</th>
-                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Splendor</th>
+                        <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Grand</th>
                         <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Le Rêve</th>
                         <th className="text-center py-3 px-2 text-sm font-bold text-gray-600">Splendore</th>
                       </tr>
                     </thead>
                     <tbody>
                       {[
-                        // Dados reais pesquisados em Dez/2024 - Fontes: Sites das construtoras
-                        { item: 'Piscina Aquecida/Climatizada', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
-                        { item: 'Piscinas Múltiplas (2+)', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Beach Arena', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Beach Tennis', aya: false, splendor: true, lereve: false, splendore: true, highlight: false },
-                        { item: 'Cinema', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Espaço Metaverso/Gamer', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
-                        { item: 'Coworking', aya: true, splendor: false, lereve: true, splendore: true, highlight: false },
-                        { item: 'Sala de Reunião', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Pet Place', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Dog Wash', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Pet Care', aya: false, splendor: false, lereve: false, splendore: true, highlight: false },
-                        { item: 'Academia/Fitness', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Fitness Externo', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Pilates/Funcional', aya: false, splendor: true, lereve: true, splendore: false, highlight: false },
-                        { item: 'Ateliê do Chef', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Churrasqueira', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Salão de Festas', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Casa de Campo', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
-                        { item: 'Playground', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Brinquedoteca', aya: true, splendor: true, lereve: true, splendore: true, highlight: false },
-                        { item: 'Espaço Teen', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Praça do Fogo/Fire Place', aya: true, splendor: false, lereve: false, splendore: true, highlight: false },
-                        { item: 'Pool Lounge/Bar Piscina', aya: true, splendor: false, lereve: true, splendore: false, highlight: false },
-                        { item: 'Solarium', aya: true, splendor: false, lereve: true, splendore: true, highlight: false },
-                        { item: 'Market/Minimercado', aya: true, splendor: false, lereve: true, splendore: false, highlight: false },
-                        { item: 'Lavanderia Coletiva', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Espaço Beauty', aya: true, splendor: false, lereve: false, splendore: true, highlight: false },
-                        { item: 'Horta Orgânica', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Praça da Árvore', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Área Uber', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Delivery Room', aya: false, splendor: false, lereve: true, splendore: true, highlight: false },
-                        { item: 'Lounge Externo', aya: true, splendor: false, lereve: false, splendore: false, highlight: true },
-                        { item: 'Wi-Fi Áreas Comuns', aya: true, splendor: false, lereve: false, splendore: false, highlight: false },
-                        { item: 'Energia Solar/Fotovoltaica', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
-                        { item: 'Gerador Full', aya: true, splendor: true, lereve: true, splendore: false, highlight: false },
-                        { item: 'Sauna', aya: false, splendor: true, lereve: false, splendore: false, highlight: false },
+                        // Dados reais pesquisados em Jan/2025 - Fontes: Sites das construtoras e folders oficiais
+                        // Grand Resort: 51 espaços de lazer em +10.000m² (Fonte: Folder Living/Cyrela)
+                        { item: 'Piscina Aquecida/Climatizada', aya: true, grand: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Piscinas Múltiplas (2+)', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Piscina com Raia 50m', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Beach Arena', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Beach Tennis', aya: false, grand: true, lereve: false, splendore: true, highlight: false },
+                        { item: 'Cinema', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Espaço Gamer/Blogger', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Coworking', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Sala de Reunião', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Pet Place/Park', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Dog Wash', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Academia/Fitness (+250m²)', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Fitness Externo', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Crossfit/Funcional', aya: false, grand: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Sala de Dança', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Espaço Gourmet', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Churrasqueiras (3+)', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Salão de Festas (2+)', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Private Pool House', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Playground', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Brinquedoteca', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Espaço Teen', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Praça do Fogo/Fire Place', aya: true, grand: false, lereve: false, splendore: true, highlight: true },
+                        { item: 'Pool Lounge', aya: true, grand: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Solarium', aya: true, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Minimarket 24h', aya: true, grand: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Lavanderia Coletiva', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Beauty Care', aya: true, grand: true, lereve: false, splendore: true, highlight: false },
+                        { item: 'Sauna & SPA', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Wellness Massage', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Espaço Zen', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Horta Orgânica', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Praça/Alameda', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Área Uber', aya: true, grand: false, lereve: false, splendore: false, highlight: true },
+                        { item: 'Delivery Room/Locker', aya: false, grand: true, lereve: true, splendore: true, highlight: false },
+                        { item: 'Lounge Externo/Relax', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Wi-Fi Áreas Comuns', aya: true, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Smart Home 2.0', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Energia Solar', aya: true, grand: false, lereve: true, splendore: false, highlight: true },
+                        { item: 'Gerador', aya: true, grand: true, lereve: true, splendore: false, highlight: false },
+                        { item: 'Quadra Poliesportiva', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
+                        { item: 'Porte-Cochère', aya: false, grand: true, lereve: false, splendore: false, highlight: false },
                       ].map((row, i) => (
                         <motion.tr
                           key={i}
@@ -696,7 +704,7 @@ export default function AyaHomeResortLanding() {
                             {row.aya ? <CheckCircle className="h-5 w-5 text-orange-600 mx-auto" /> : <X className="h-5 w-5 text-gray-300 mx-auto" />}
                           </td>
                           <td className="py-2 px-2 text-center">
-                            {row.splendor ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
+                            {row.grand ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
                           </td>
                           <td className="py-2 px-2 text-center">
                             {row.lereve ? <CheckCircle className="h-5 w-5 text-gray-400 mx-auto" /> : <X className="h-5 w-5 text-gray-200 mx-auto" />}
@@ -713,19 +721,20 @@ export default function AyaHomeResortLanding() {
                 {/* Summary Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                   <div className="bg-gray-900 rounded-xl p-4 text-center border border-gray-800">
-                    <p className="text-3xl font-black text-white">31</p>
+                    <p className="text-3xl font-black text-white">29</p>
                     <p className="text-sm text-gray-300 font-medium">Itens AYA</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
-                    <p className="text-3xl font-black text-gray-700">14</p>
-                    <p className="text-sm text-gray-600 font-medium">Splendor Patriani</p>
+                    <p className="text-3xl font-black text-gray-700">33</p>
+                    <p className="text-sm text-gray-600 font-medium">Grand Resort</p>
+                    <p className="text-xs text-gray-400">51 espaços total</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
                     <p className="text-3xl font-black text-gray-700">16</p>
                     <p className="text-sm text-gray-600 font-medium">Le Rêve</p>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-200">
-                    <p className="text-3xl font-black text-gray-700">15</p>
+                    <p className="text-3xl font-black text-gray-700">13</p>
                     <p className="text-sm text-gray-600 font-medium">Splendore Mauá</p>
                   </div>
                 </div>
@@ -753,7 +762,7 @@ export default function AyaHomeResortLanding() {
                     <PolarAngleAxis dataKey="subject" tick={{ fill: '#6b7280', fontSize: 14 }} />
                     <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: '#9ca3af', fontSize: 12 }} />
                     <Radar name="AYA" dataKey="AYA" stroke="#ff6b35" fill="#ff6b35" fillOpacity={0.3} strokeWidth={3} />
-                    <Radar name="Splendor" dataKey="Splendor" stroke="#9ca3af" fill="#9ca3af" fillOpacity={0.1} strokeWidth={2} />
+                    <Radar name="Grand Resort" dataKey="Grand" stroke="#9ca3af" fill="#9ca3af" fillOpacity={0.1} strokeWidth={2} />
                     <Radar name="Le Rêve" dataKey="LeReve" stroke="#f59e0b" fill="#f59e0b" fillOpacity={0.1} strokeWidth={2} />
                     <Radar name="Marbella" dataKey="Marbella" stroke="#10b981" fill="#10b981" fillOpacity={0.1} strokeWidth={2} />
                     <Legend />
@@ -886,7 +895,7 @@ export default function AyaHomeResortLanding() {
                 </ResponsiveContainer>
                 <div className="bg-orange-50 rounded-xl p-3 border border-orange-200 mt-4">
                   <p className="text-xs text-orange-900">
-                    <strong>AYA 35% mais barato</strong> que Santo André e 23% abaixo de S. Bernardo (lançamentos alto padrão)
+                    <strong>AYA 44% mais barato</strong> que Santo André e 23% abaixo de S. Bernardo (lançamentos alto padrão)
                   </p>
                 </div>
               </CardContent>
@@ -1152,6 +1161,7 @@ export default function AyaHomeResortLanding() {
                     { name: 'Joias da Serra', construtora: 'Leoma Engenharia', local: 'Rio Grande da Serra', area: '50-52m²', price: 'R$308k-324k', priceM2: 'R$ 6.150', date: '2025', link: '#' },
 
                     // SANTO ANDRÉ - Bairro Jardim (Alto Padrão)
+                    { name: 'Grand Resort by Living', construtora: 'Living (Cyrela)', local: 'Sto André (Jardim)', area: '52-102m²', price: 'R$1.05M+', priceM2: 'R$ 17.213', date: 'Jun/28', link: 'https://lp.meuliving.com.br/grand-resort-by-living' },
                     { name: 'Le Rêve Résidences', construtora: 'Le Rêve', local: 'Sto André (Jardim)', area: '128m²', price: 'R$1.79M', priceM2: 'R$ 14.031', date: '2025', link: 'https://lerevejardim.com/' },
                     { name: 'Splendor Jardim', construtora: 'Patriani', local: 'Sto André (Jardim)', area: '160-165m²', price: 'R$2.06M', priceM2: 'R$ 12.875', date: 'Dez/26', link: 'https://www.construtorapatriani.com.br/imovel/splendor-jardim-patriani' },
                     { name: 'Figueiras by Motiró', construtora: 'Grupo Motiró', local: 'Sto André (Jardim)', area: '112m²', price: 'R$969k+', priceM2: 'R$ 8.651', date: 'Nov/25', link: 'https://figueirasmotiro.com.br/' },
@@ -1197,10 +1207,10 @@ export default function AyaHomeResortLanding() {
               </table>
               <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 p-4 bg-gray-50 rounded-xl">
                 <p className="text-sm text-gray-600">
-                  <strong className="text-orange-600">16 empreendimentos</strong> mapeados:
-                  <strong> 3 em Ribeirão Pires</strong>, <strong>1 em Rio Grande da Serra</strong>, <strong>7 em Santo André</strong>, <strong>3 em São Bernardo</strong>, <strong>2 em Mauá</strong>
+                  <strong className="text-orange-600">17 empreendimentos</strong> mapeados:
+                  <strong> 3 em Ribeirão Pires</strong>, <strong>1 em Rio Grande da Serra</strong>, <strong>8 em Santo André</strong>, <strong>3 em São Bernardo</strong>, <strong>2 em Mauá</strong>
                 </p>
-                <span className="text-xs text-gray-500">Fontes: Construtoras, ABC Apartamentos, Apto.vc | Dez/2024</span>
+                <span className="text-xs text-gray-500">Fontes: Construtoras, ABC Apartamentos, Apto.vc | Jan/2025</span>
               </div>
             </CardContent>
           </Card>
@@ -1221,7 +1231,7 @@ export default function AyaHomeResortLanding() {
                   { region: 'R. G. da Serra', aya: false, min: 6150, max: 6150, avg: 'R$ 6.150', color: 'gray', desc: 'Joias da Serra' },
                   { region: 'Mauá', aya: false, min: 5700, max: 8548, avg: 'R$ 7.124', color: 'gray', desc: 'Splendore, Mandarim' },
                   { region: 'São Bernardo', aya: false, min: 8500, max: 11305, avg: 'R$ 9.700', color: 'gray', desc: 'Unique, Helbor, Motiró' },
-                  { region: 'Santo André', aya: false, min: 8143, max: 14925, avg: 'R$ 11.375', color: 'gray', desc: 'Patriani, Motiró, Le Rêve' },
+                  { region: 'Santo André', aya: false, min: 8143, max: 17213, avg: 'R$ 12.100', color: 'gray', desc: 'Grand Resort, Patriani, Le Rêve' },
                 ].map((item, i) => (
                   <div key={i} className={`p-4 rounded-xl border-2 ${item.aya ? 'border-orange-400 bg-orange-50' : 'border-gray-200 bg-gray-50'}`}>
                     <h4 className={`font-bold mb-1 ${item.aya ? 'text-orange-600' : 'text-gray-900'}`}>{item.region}</h4>
@@ -1234,7 +1244,7 @@ export default function AyaHomeResortLanding() {
               <div className="grid md:grid-cols-3 gap-4 p-4 bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl border border-orange-200">
                 <div className="text-center">
                   <p className="text-xs text-gray-600 uppercase font-bold">AYA vs Santo André</p>
-                  <p className="text-2xl font-black text-green-600">-26% a -43%</p>
+                  <p className="text-2xl font-black text-green-600">-35% a -51%</p>
                   <p className="text-xs text-gray-500">mais barato que lançamentos alto padrão</p>
                 </div>
                 <div className="text-center">
@@ -1255,7 +1265,7 @@ export default function AyaHomeResortLanding() {
           <div className="grid md:grid-cols-4 gap-4">
             {[
               { title: 'Pioneirismo', desc: '1º vertical alto padrão', icon: Award },
-              { title: 'Preço', desc: '35% + barato/m²', icon: DollarSign },
+              { title: 'Preço', desc: '44% + barato/m²', icon: DollarSign },
               { title: 'Lazer', desc: '31 itens resort', icon: Sparkles },
               { title: 'Local', desc: '50 min SP', icon: MapPin },
             ].map((vantagem, i) => (
@@ -1319,7 +1329,7 @@ export default function AyaHomeResortLanding() {
                     {[
                       { text: 'Pioneirismo: 1º empreendimento vertical alto padrão em Ribeirão Pires', strong: true },
                       { text: '31 itens de lazer - conceito resort único na região', strong: true },
-                      { text: 'Preço/m² competitivo (R$ 8.420) - 35% mais acessível que lançamentos alto padrão Santo André', strong: true },
+                      { text: 'Preço/m² competitivo (R$ 8.420) - 44% mais acessível que lançamentos alto padrão Santo André', strong: true },
                       { text: 'Metragem ampla (114m²) - acima da média regional (70-80m²)', strong: false },
                       { text: 'Diferenciais exclusivos: Beach Arena, Pet Place, Smart Home, Energia Solar', strong: true },
                       { text: 'Localização estratégica: 50 min de SP, próximo a natureza', strong: false },
@@ -1546,7 +1556,7 @@ export default function AyaHomeResortLanding() {
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 flex-shrink-0"></div>
-                        <span><strong>Diferenciação vs ABC:</strong> Enfatizar resort lifestyle e preço/m² 35% menor que lançamentos Santo André</span>
+                        <span><strong>Diferenciação vs ABC:</strong> Enfatizar resort lifestyle e preço/m² 44% menor que lançamentos Santo André</span>
                       </li>
                     </ul>
                   </div>
@@ -1631,7 +1641,7 @@ export default function AyaHomeResortLanding() {
                       </li>
                       <li className="flex items-start gap-2">
                         <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
-                        <span>Preços elevados em lançamentos alto padrão Santo André/SBC (R$ 11k-13k/m²)</span>
+                        <span>Preços elevados em lançamentos alto padrão Santo André/SBC (R$ 11k-17k/m²)</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <X className="h-4 w-4 text-red-500 mt-0.5 flex-shrink-0" />
@@ -1702,11 +1712,11 @@ export default function AyaHomeResortLanding() {
                   <div className="grid md:grid-cols-2 gap-4">
                     {[
                       { headline: '"114m² a 15 min do ABC. Sua família merece esse espaço."', format: 'Meta Ads - Feed' },
-                      { headline: '"35% mais barato que Santo André. Mesmo padrão, preço justo."', format: 'Google Ads - Search' },
+                      { headline: '"44% mais barato que Santo André. Mesmo padrão, preço justo."', format: 'Google Ads - Search' },
                       { headline: '"Resort a 20 min do seu trabalho. Lazer todo dia, não só férias."', format: 'Meta Ads - Stories' },
                       { headline: '"Pioneiro em Ribeirão Pires: valorização garantida + qualidade de vida."', format: 'Google Display' },
                       { headline: '"Piscina aquecida, cinema, pet place. Tudo que falta no seu prédio."', format: 'Meta Ads - Reels' },
-                      { headline: '"R$ 8.420/m² vs R$ 13k do ABC. Faça as contas."', format: 'LinkedIn Ads' },
+                      { headline: '"R$ 8.420/m² vs R$ 15k de Santo André. Faça as contas."', format: 'LinkedIn Ads' },
                     ].map((ad, i) => (
                       <motion.div
                         key={i}
